@@ -445,6 +445,10 @@
 
            (setq lsp-treemacs-theme "danny-colors")))))
 
+   ;; Dart
+   (use-package lsp-dart
+     :hook (dart-mode . (lambda () (require 'lsp-dart))))
+
    ;; Python: pyright
    (use-package lsp-pyright
      :preface
