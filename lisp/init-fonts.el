@@ -1,4 +1,4 @@
-(set-frame-font "Menlo:size=15")
+(set-frame-font "Menlo:size=14")
 (setq default-frame-alist nil)
 
 (provide 'init-fonts)
