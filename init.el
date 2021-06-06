@@ -72,16 +72,17 @@ decrease this. If you experience stuttering, increase this.")
 
 ;; backup files
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
-  backup-by-copying t    ; Don't delink hardlinks
-  version-control t      ; Use version numbers on backups
-  delete-old-versions t  ; Automatically delete excess backups
-  kept-new-versions 20   ; how many of the newest versions to keep
-  kept-old-versions 5    ; and how many of the old
-  )
+      backup-by-copying t    ; Don't delink hardlinks
+      version-control t      ; Use version numbers on backups
+      delete-old-versions t  ; Automatically delete excess backups
+      kept-new-versions 20   ; how many of the newest versions to keep
+      kept-old-versions 5    ; and how many of the old
+      )
+
 
 ;; Packages
 (require 'init-package)
-
+(require 'init-appearance)
 ;; Preferences
 (require 'init-basic)
 (require 'init-hydra)
@@ -113,7 +114,7 @@ decrease this. If you experience stuttering, increase this.")
 ;; Programming
 (require 'init-vcs)
 (require 'init-projectile)
-;; (require 'init-lsp)
+(require 'init-lsp)
 (require 'init-prog)
 (require 'init-c)
 (require 'init-dart)
