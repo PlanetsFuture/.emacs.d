@@ -66,12 +66,7 @@
       ;; Make certain buffers grossly incandescent
       ;; Must before loading the theme
       (use-package solaire-mode
-        :functions persp-load-state-from-file
-        :hook (((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
-               (minibuffer-setup . solaire-mode-in-minibuffer))
-        :init
-        (solaire-global-mode 1)
-        (advice-add #'persp-load-state-from-file :after #'solaire-mode-restore-persp-mode-buffers))
+        :hook (after-load-theme . solaire-global-mode))
 
       (use-package doom-themes
         :custom-face
