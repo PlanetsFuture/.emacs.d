@@ -1,7 +1,7 @@
 
 ;; emacs transparency
-(set-frame-parameter (selected-frame) 'alpha '(99 98))
-(add-to-list 'default-frame-alist '(alpha 99 98))
+(set-frame-parameter (selected-frame) 'alpha '(98 97))
+(add-to-list 'default-frame-alist '(alpha 98 97))
 
 (eval-when-compile (require 'cl))
 (defun toggle-transparency ()
@@ -10,7 +10,7 @@
        (cadr (frame-parameter nil 'alpha))
        100)
       (set-frame-parameter nil 'alpha '(100 100))
-    (set-frame-parameter nil 'alpha '(99 98))))
+    (set-frame-parameter nil 'alpha '(98 97))))
 (global-set-key (kbd "C-c ^") 'toggle-transparency)
 
 ;; Set transparency of emacs
