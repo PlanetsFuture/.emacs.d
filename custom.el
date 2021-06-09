@@ -1,6 +1,6 @@
 (setq danny-full-name "Danny Ramírez")
 (setq danny-mail-address "danny.ramrez7@gmail.com")
-(setq danny-theme 'classic)
+(setq danny-theme 'night)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
