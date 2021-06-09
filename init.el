@@ -82,7 +82,7 @@ decrease this. If you experience stuttering, increase this.")
 
 ;; Packages
 (require 'init-package)
-(require 'init-gccemacs)
+;; (require 'init-gccemacs)
 (require 'init-appearance)
 ;; Preferences
 (require 'init-basic)
