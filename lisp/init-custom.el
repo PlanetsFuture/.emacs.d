@@ -10,7 +10,7 @@
 (defgroup danny nil
   "Danny Emacs customization."
   :group 'convenience
-  :link '(url-link :tag "Homepage" "https://github.com/seagle0128/.emacs.d"))
+  :link '(url-link :tag "Homepage" "https://github.com/PlanetsFuture/.emacs.d"))
 
 (defcustom danny-logo (expand-file-name
                          (if (display-graphic-p) "banner.txt" "banner.txt")
