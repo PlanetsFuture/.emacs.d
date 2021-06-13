@@ -483,9 +483,14 @@
    ;; Dart
    (use-package lsp-dart
      :ensure t
-     :hook (dart-mode . lsp)
+     :hook (dart-mode . (lambda () (require 'lsp)))
      :init (setq lsp-dart-sdk-dir
                  "/Users/dannyramirez/flutter/bin/cache/dart-sdk/"))
+   ;; Flutter
+   (use-package flutter
+     :after dart-mode
+     :bind (:map dart-mode-map
+                 ("C-M-x" . #'flutter-run-or-hot-reload)))
 
    ;; Java support
    (when emacs/>=25.2p
