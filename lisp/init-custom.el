@@ -148,10 +148,9 @@ If Non-nil, save and restore the frame's geometry."
 (defcustom danny-lsp 'lsp-mode
   "Set language server."
   :group 'danny
-  :type '(choice
-          (const :tag "LSP Mode" 'lsp-mode)
-          (const :tag "Eglot" 'eglot)
-          nil))
+  :type '(choice          (const :tag "LSP Mode" 'lsp-mode)
+                          (const :tag "Eglot" 'eglot)
+                          (const :tag "Disable" nil)))
 
 (defcustom danny-lsp-format-on-save-ignore-modes '(c-mode c++-mode python-mode)
   "The modes that don't auto format and organize imports while saving the buffers.
@@ -198,7 +197,6 @@ Nil to use font supports ligatures."
     ("#+SETUPFILE:" . ?⛮)
     ("#+TAGS:" . ?🏷)
     ("#+TITLE:" . ?📓)
-
     ("#+BEGIN_SRC" . ?✎)
     ("#+END_SRC" . ?□)
     ("#+BEGIN_QUOTE" . ?»)
