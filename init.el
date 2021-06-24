@@ -18,8 +18,8 @@ decrease this. If you experience stuttering, increase this.")
 (defvar danny-gc-cons-upper-limit (if (display-graphic-p) 512000000 128000000)
   "The temporary value for `gc-cons-threshold' to defer it.")
 
-(defvar danny-gc-timer (run-with-idle-timer 10 t #'garbage-collect)
-  "Run garbarge collection when idle 10s.")
+(defvar danny-gc-timer (run-with-idle-timer 5 t #'garbage-collect)
+  "Run garbarge collection when idle 5s.")
 
 (defvar default-file-name-handler-alist file-name-handler-alist)
 
@@ -121,5 +121,7 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-dart)
 (require 'init-python)
 (require 'init-rust)
+(require 'init-maxima)
+(require 'init-racket)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
