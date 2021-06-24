@@ -15,8 +15,16 @@
     (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
     (add-to-list 'projectile-project-root-files-bottom-up "BUILD")))
 
-;; dart formatter
-(setq dart-format-on-save t)
+(use-package dart-mode
+  :hook (dart-mode . flutter-test-mode))
+
+(use-package flutter
+  :after dart-mode
+  :init
+  (setq flutter-sdk-path "~/flutter/")
+  :bind
+  (:map dart-mode-map
+        ("C-M-x" . #'flutter-run-or-hot-reload)))
 
 (provide 'init-dart)
 
