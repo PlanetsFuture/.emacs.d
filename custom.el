@@ -2,8 +2,9 @@
 
 (setq danny-full-name "Danny Ramírez")
 (setq danny-mail-address "danny.ramrez7@gmail.com")
-(setq danny-theme 'night)
-(setq danny-lsp nil)
+(setq danny-theme 'light)
+(setq danny-lsp 'lsp-mode)
+
 
 ;; Fonts
 (when (display-graphic-p)
