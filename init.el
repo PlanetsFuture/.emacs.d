@@ -6,7 +6,7 @@
 ;;
 
 ;;; Code:
-
+(setq package-native-compile t)
 (when (version< emacs-version "25.1")
   (error "This requires Emacs 25.1 and above!"))
 
@@ -121,6 +121,5 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-python)
 (require 'init-rust)
 (require 'init-maxima)
-(require 'init-racket)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
