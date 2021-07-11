@@ -3,18 +3,18 @@
 (setq danny-full-name "Danny Ramírez")
 (setq danny-mail-address "danny.ramrez7@gmail.com")
 (setq danny-theme 'light)
-(setq danny-lsp 'lsp-mode)
-
+(setq danny-lsp nil)
+(setq inferior-lisp-program "sbcl")
 
 ;; Fonts
 (when (display-graphic-p)
   ;; Set default font
-  (cl-loop for font in '( "Monaco" "Fira Code" "Hack"
+  (cl-loop for font in '("JuliaMono" "Iosevka" "Fira Code" "Monaco"  "Hack"
                           "Menlo" "DejaVu Sans Mono")
            when (font-installed-p font)
            return (set-face-attribute 'default nil
                                       :font font
-                                      :height (cond (sys/mac-x-p 130)
+                                      :height (cond (sys/mac-x-p 140)
                                                     (sys/win32p 110)
                                                     (t 100)))))
 
